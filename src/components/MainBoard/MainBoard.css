@@ -1,0 +1,14 @@
+.pending,.processing,.done{
+    background-color: white;
+    width: 300px;
+    height: auto;
+
+}
+h3{
+    text-align: center;
+    border-bottom: 1px solid;
+}
+.board-container{
+    display: flex;
+    justify-content: space-around;
+}
