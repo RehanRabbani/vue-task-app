@@ -1,0 +1,18 @@
+.task-page{
+    display: flex
+}
+.col-1{
+    height: auto;
+    width: 80%;
+    margin: 1rem;
+}
+.col-2{  
+    height: auto;
+    width: 20%;
+    margin: 1rem;
+
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+}

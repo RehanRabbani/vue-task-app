@@ -1,18 +1,17 @@
 <template >
     <div class="container">
-        <progress-bar/>
+        <progress-bar />
         <section class="board-section">
             <section class="button-section">
-                <search-filter/>
-                <add-task/>
-                
+                <search-filter />
+                <add-task />
+
             </section>
         </section>
         <section>
-            <main-board/>
+            <main-board />
         </section>
     </div>
-   
 </template>
 s
 <script setup>
@@ -28,5 +27,4 @@ import MainBoard from './MainBoard/MainBoard.vue'
     justify-content: flex-end;
     width: 100%;
 }
-
 </style>

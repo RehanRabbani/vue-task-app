@@ -4,22 +4,28 @@ import { defineStore } from "pinia";
 export const useAppStore = defineStore("app", {
   state: () => ({
     list1: [
-      { name: "a", id: 1 },
-      { name: "b", id: 2 },
-      { name: "c", id: 3 },
-      { name: "d", id: 4 },
+      { title: "a", desc: "", file: "", status: "", tag: "", id: 1 },
+      { title: "b", desc: "", file: "", status: "", tag: "", id: 2 },
+      { title: "c", desc: "", file: "", status: "", tag: "", id: 3 },
+      { title: "d", desc: "", file: "", status: "", tag: "", id: 4 },
     ],
     list2: [
-      { name: "e", id: 5 },
-      { name: "f", id: 6 },
-      { name: "g", id: 7 },
+      { title: "e", desc: "", file: "", status: "", tag: "", id: 5 },
+      { title: "f", desc: "", file: "", status: "", tag: "", id: 6 },
+      { title: "g", desc: "", file: "", status: "", tag: "", id: 7 },
     ],
     list3: [
-      { name: "rehan", id: 8 },
-      { name: "hage", id: 9 },
-      { name: "hafeez", id: 10 },
+      { title: "h", desc: "", file: "", status: "", tag: "", id: 8 },
+      { title: "i", desc: "", file: "", status: "", tag: "", id: 9 },
+      { title: "j", desc: "", file: "", status: "", tag: "", id: 10 },
     ],
   }),
+  actions: {
+    addTask(newTask) {
+      console.log(newTask, "new");
+      this.list1.push(newTask);
+    },
+  },
 });
 
 export default useAppStore;
