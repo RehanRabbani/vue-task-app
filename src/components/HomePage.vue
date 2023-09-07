@@ -9,7 +9,7 @@
             </section>
         </section>
         <section>
-            <main-board />
+            <main-board :list1="appStore.list1" :list2="appStore.list2" :list3="appStore.list3" />
         </section>
     </div>
 </template>
@@ -18,7 +18,9 @@ s
 import ProgressBar from './ProgressBar/ProgressBar.vue';
 import AddTask from './AddTask/AddTask.vue';
 import SearchFilter from './SearchFilter/SearchFilter.vue';
-import MainBoard from './MainBoard/MainBoard.vue'
+import MainBoard from './MainBoard/MainBoard.vue';
+import useAppStore from '@/store/app';
+const appStore = useAppStore()
 </script>
 
 <style scoped>

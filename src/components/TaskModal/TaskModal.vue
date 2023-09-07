@@ -1,5 +1,4 @@
 
-
 <template>
     <div class="task-page">
         <section class="col-1">
@@ -28,6 +27,7 @@ import { reactive } from 'vue';
 import useAppStore from '@/store/app';
 
 const appStore = useAppStore();
+const randomValue = Math.round(Math.random() * 100);
 const newTask = reactive({
     title: '',
     desc: '',
@@ -38,8 +38,9 @@ const newTask = reactive({
 
 const addTask = () => {
     const { title, desc, file, status, tag } = newTask
+
     console.log("add task", newTask.title)
-    appStore.addTask({ title, desc, file, status, tag })
+    appStore.addTask({ title, desc, file, status, tag, id: randomValue })
 };
 
 const handleDataFromChild = (data) => {
