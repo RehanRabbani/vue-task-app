@@ -1,11 +1,10 @@
-<template >
+<template>
     <div class="container">
-        <progress-bar />
+        <progress-bar /> <!-- Use "progress" instead of "progess" -->
         <section class="board-section">
             <section class="button-section">
                 <search-filter />
                 <add-task />
-
             </section>
         </section>
         <section>
@@ -13,14 +12,17 @@
         </section>
     </div>
 </template>
-s
+
 <script setup>
 import ProgressBar from './ProgressBar/ProgressBar.vue';
 import AddTask from './AddTask/AddTask.vue';
 import SearchFilter from './SearchFilter/SearchFilter.vue';
 import MainBoard from './MainBoard/MainBoard.vue';
 import useAppStore from '@/store/app';
-const appStore = useAppStore()
+
+
+const appStore = useAppStore();
+
 </script>
 
 <style scoped>

@@ -20,6 +20,21 @@ export const useAppStore = defineStore("app", {
       { title: "j", desc: "", file: "", status: "Done", tag: "", id: 10 },
     ],
   }),
+  getters: {
+    skill() {
+      const pendingTaskCount = this.list1.length;
+      const processingTaskCount = this.list2.length;
+      const doneTaskCount = this.list3.length;
+      const totalTaskCount =
+        pendingTaskCount + processingTaskCount + doneTaskCount;
+
+      const donePercentage = (doneTaskCount / totalTaskCount) * 100;
+
+      return {
+        done: donePercentage,
+      };
+    },
+  },
   actions: {
     addTask(newTask) {
       const { status } = newTask;
