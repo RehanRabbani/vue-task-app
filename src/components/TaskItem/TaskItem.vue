@@ -13,16 +13,16 @@
             </span>
         </section>
         <section>
-            <p>Task</p>
-            <p>description</p>
-            <p>Estimated Time</p>
-            <p>Attachements</p>
+            <p>Task :{{ title }}</p>
+            <p>description :{{ desc }} </p>
+            <p>Estimated Time:{{ time }}</p>
+            <p>Attachements:{{ file?.length }}</p>
         </section>
     </div>
 </template>
 
 <script setup>
-defineProps(['title', "id", "status"])
+defineProps(['title', "id", "status", "desc", "time", "file",])
 import useAppStore from '@/store/app';
 
 const appStore = useAppStore();

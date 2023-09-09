@@ -41,7 +41,7 @@ const addTask = () => {
 };
 
 const handleDataFromChild = (data) => {
-    newTask.file = data
+    newTask.file = [data]
 }
 
 </script>

@@ -5,20 +5,76 @@ import { statusListMap } from "@/util";
 export const useAppStore = defineStore("app", {
   state: () => ({
     list1: [
-      // { id: 1, title: "a", desc: "abcj", file: "", status: "Pending", tag: "" },
-      // { title: "b", desc: "", file: "", status: "Pending", tag: "", id: 2 },
-      // { title: "c", desc: "", file: "", status: "Pending", tag: "", id: 3 },
-      // { title: "d", desc: "", file: "", status: "Pending", tag: "", id: 4 },
+      {
+        id: 1,
+        title: "rehan",
+        desc: "abcj",
+        file: [],
+        status: "Pending",
+        tag: "",
+      },
+      {
+        id: 3,
+        title: "a",
+        desc: "abcj",
+        file: [],
+        status: "Pending",
+        tag: "",
+      },
+      {
+        id: 1,
+        title: "a",
+        desc: "abcj",
+        file: [],
+        status: "Pending",
+        tag: "",
+      },
+      {
+        id: 2,
+        title: "a",
+        desc: "abcj",
+        file: [],
+        status: "Pending",
+        tag: "",
+      },
     ],
     list2: [
-      // { title: "e", desc: "", file: "", status: "Processing", tag: "", id: 5 },
-      // { title: "f", desc: "", file: "", status: "Processing", tag: "", id: 6 },
-      // { title: "g", desc: "", file: "", status: "Processing", tag: "", id: 7 },
+      {
+        title: "rehan",
+        desc: "dsa",
+        file: [],
+        status: "Processing",
+        tag: "",
+        id: 5,
+      },
+      {
+        title: "f",
+        desc: "da",
+        file: [],
+        status: "Processing",
+        tag: "",
+        id: 6,
+      },
+      {
+        title: "g",
+        desc: "dsa",
+        file: [],
+        status: "Processing",
+        tag: "",
+        id: 7,
+      },
     ],
     list3: [
-      // { title: "h", desc: "", file: "", status: "Done", tag: "", id: 8 },
-      // { title: "i", desc: "", file: "", status: "Done", tag: "", id: 9 },
-      // { title: "j", desc: "", file: "", status: "Done", tag: "", id: 10 },
+      {
+        title: "rehan",
+        desc: "dsad",
+        file: [],
+        status: "Done",
+        tag: "",
+        id: 8,
+      },
+      { title: "i", desc: "das", file: [], status: "Done", tag: "", id: 9 },
+      { title: "j", desc: "dasd", file: [], status: "Done", tag: "", id: 10 },
     ],
   }),
 
@@ -90,6 +146,9 @@ export const useAppStore = defineStore("app", {
       if (listName && this[listName]) {
         this[listName] = this[listName].filter((task) => task.id !== taskId);
       }
+    },
+    filteredList(data) {
+      console.log(data);
     },
   },
 });
