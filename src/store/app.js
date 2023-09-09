@@ -5,20 +5,20 @@ import { statusListMap } from "@/util";
 export const useAppStore = defineStore("app", {
   state: () => ({
     list1: [
-      { id: 1, title: "a", desc: "abcj", file: "", status: "Pending", tag: "" },
-      { title: "b", desc: "", file: "", status: "Pending", tag: "", id: 2 },
-      { title: "c", desc: "", file: "", status: "Pending", tag: "", id: 3 },
-      { title: "d", desc: "", file: "", status: "Pending", tag: "", id: 4 },
+      // { id: 1, title: "a", desc: "abcj", file: "", status: "Pending", tag: "" },
+      // { title: "b", desc: "", file: "", status: "Pending", tag: "", id: 2 },
+      // { title: "c", desc: "", file: "", status: "Pending", tag: "", id: 3 },
+      // { title: "d", desc: "", file: "", status: "Pending", tag: "", id: 4 },
     ],
     list2: [
-      { title: "e", desc: "", file: "", status: "Processing", tag: "", id: 5 },
-      { title: "f", desc: "", file: "", status: "Processing", tag: "", id: 6 },
-      { title: "g", desc: "", file: "", status: "Processing", tag: "", id: 7 },
+      // { title: "e", desc: "", file: "", status: "Processing", tag: "", id: 5 },
+      // { title: "f", desc: "", file: "", status: "Processing", tag: "", id: 6 },
+      // { title: "g", desc: "", file: "", status: "Processing", tag: "", id: 7 },
     ],
     list3: [
-      { title: "h", desc: "", file: "", status: "Done", tag: "", id: 8 },
-      { title: "i", desc: "", file: "", status: "Done", tag: "", id: 9 },
-      { title: "j", desc: "", file: "", status: "Done", tag: "", id: 10 },
+      // { title: "h", desc: "", file: "", status: "Done", tag: "", id: 8 },
+      // { title: "i", desc: "", file: "", status: "Done", tag: "", id: 9 },
+      // { title: "j", desc: "", file: "", status: "Done", tag: "", id: 10 },
     ],
   }),
 
@@ -60,7 +60,7 @@ export const useAppStore = defineStore("app", {
         Done: this.list3,
       };
 
-      if (item.status !== updatedTask.status) {
+      if (item?.status !== updatedTask?.status) {
         const statusToListMap = {
           Pending: this.list1,
           Processing: this.list2,
@@ -86,6 +86,7 @@ export const useAppStore = defineStore("app", {
     },
     deleteTask(taskId, status) {
       const listName = statusListMap[status];
+
       if (listName && this[listName]) {
         this[listName] = this[listName].filter((task) => task.id !== taskId);
       }

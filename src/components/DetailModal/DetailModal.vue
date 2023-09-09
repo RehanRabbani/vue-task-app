@@ -60,7 +60,7 @@ const closeModal = () => {
 };
 
 const update = (taskId, formData) => {
-    console.log(taskId, formData, "formData")
+
 
     appStore.updateTask(taskId, formData);
     router.push({ name: 'Home' });
