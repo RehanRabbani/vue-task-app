@@ -12,7 +12,60 @@
     margin: 1rem;
 
 }
-.name{
+.task-creation{
     display: flex;
     justify-content: space-between;
 }
+.jira-task-creation {
+    background-color: #fff; /* Jira's background color */
+    padding: 20px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif; /* Jira's font stack */
+  }
+  
+  .jira-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Jira's heading color */
+    margin-bottom: 20px;
+  }
+  
+  .jira-form-field {
+    margin-bottom: 20px;
+  }
+  
+  .jira-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Jira's label color */
+  }
+  
+  .jira-input,
+  .jira-textarea,
+  .jira-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .jira-buttons {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .jira-button {
+    padding: 10px 20px;
+    background-color: #0052cc; /* Jira's primary button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .jira-button:hover {
+    background-color: #003f9e; /* Jira's button hover color */
+  }
