@@ -2,8 +2,8 @@
 
 <template>
     <div class="text-center">
-        <v-dialog v-model="showModal" width="800">
-            <v-card>
+        <v-dialog v-model="showModal">
+            <v-card class="dialog-card">
                 <v-text-field label="Title" v-model="formData.title"></v-text-field>
                 <v-textarea label="Desc" v-model="formData.desc"></v-textarea>
                 <v-select label="Select" v-model="formData.status" :items="['Pending', 'Processing', 'Done']"></v-select>
@@ -11,7 +11,7 @@
                     :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"></v-autocomplete>
 
 
-                <v-card-actions>
+                <v-card-actions class="dialog-actions">
                     <v-btn color="primary" @click="closeModal">Close Dialog</v-btn>
                     <v-btn color="primary" @click="update(formData.id, formData)">Update</v-btn>
                 </v-card-actions>
@@ -67,3 +67,18 @@ const update = (taskId, formData) => {
 }
 </script>
   
+
+<style scoped>
+.dialog-card {
+    max-width: 700px;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+</style>
