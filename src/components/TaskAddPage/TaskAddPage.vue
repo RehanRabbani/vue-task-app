@@ -18,7 +18,7 @@
         <section class="col-2">
             <v-select label="Select" v-model="newTask.status" :items="['Pending', 'Processing', 'Done']"></v-select>
             <v-autocomplete label="Autocomplete" v-model="newTask.tag"
-                :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"></v-autocomplete>
+                :items="['release 3', 'release 2', 'release 3']"></v-autocomplete>
         </section>
 
     </div>
@@ -48,4 +48,4 @@ const handleDataFromChild = (data) => {
 }
 
 </script>
-<style src="./TaskModal.css" scoped></style>
+<style src="./TaskAddPage.css" scoped></style>

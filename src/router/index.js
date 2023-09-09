@@ -1,6 +1,6 @@
 // Composables
 import { createRouter, createWebHistory } from "vue-router";
-import TaskModal from "../components/TaskModal/TaskModal.vue";
+import TaskAddPage from "../components/TaskAddPage/TaskAddPage.vue";
 // import HelloWorld from "../components/HelloWorld.vue";
 import DetailModal from "../components/DetailModal/DetailModal.vue";
 
@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: "/new-route", // Define the path for your new route
-    component: TaskModal, // Use your new component here
+    component: TaskAddPage, // Use your new component here
   },
   {
     path: "/task/:taskId/:status", // Define a route parameter ":taskId"
