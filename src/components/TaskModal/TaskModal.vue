@@ -7,8 +7,10 @@
                 <v-btn color="primary" @click="dialog = false">Close</v-btn>
             </section>
             <v-text-field label="Title" v-model="newTask.title"></v-text-field>
-            <v-textarea label="Desc" v-model="newTask.desc"></v-textarea>
+            <v-textarea label="Description" v-model="newTask.desc"></v-textarea>
+            <v-text-field label="Date" :type="'date'" v-model="newTask.time"></v-text-field>
             <file-upload @data-to-parent="handleDataFromChild" />
+
             <v-btn @click="addTask">
                 Add
             </v-btn>
@@ -32,12 +34,13 @@ const newTask = reactive({
     desc: '',
     file: '',
     status: '',
-    tag: ''
+    tag: '',
+    time: ''
 })
 
 const addTask = () => {
-    const { title, desc, file, status, tag } = newTask
-    appStore.addTask({ title, desc, file, status, tag, id: Date.now() })
+    const { title, desc, file, status, tag, time } = newTask
+    appStore.addTask({ title, desc, file, time, status, tag, id: Date.now() })
 };
 
 const handleDataFromChild = (data) => {

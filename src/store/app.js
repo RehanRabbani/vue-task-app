@@ -12,6 +12,7 @@ export const useAppStore = defineStore("app", {
         file: [],
         status: "Pending",
         tag: "",
+        time: "2023-09-15",
       },
       {
         id: 3,
@@ -20,6 +21,7 @@ export const useAppStore = defineStore("app", {
         file: [],
         status: "Pending",
         tag: "",
+        time: "2023-09-09",
       },
       {
         id: 1,
@@ -28,6 +30,7 @@ export const useAppStore = defineStore("app", {
         file: [],
         status: "Pending",
         tag: "",
+        time: "",
       },
       {
         id: 2,
@@ -36,6 +39,7 @@ export const useAppStore = defineStore("app", {
         file: [],
         status: "Pending",
         tag: "",
+        time: "",
       },
     ],
     list2: [
@@ -46,6 +50,7 @@ export const useAppStore = defineStore("app", {
         status: "Processing",
         tag: "",
         id: 5,
+        time: "2023-09-15",
       },
       {
         title: "f",
@@ -54,6 +59,7 @@ export const useAppStore = defineStore("app", {
         status: "Processing",
         tag: "",
         id: 6,
+        time: "",
       },
       {
         title: "g",
@@ -62,6 +68,7 @@ export const useAppStore = defineStore("app", {
         status: "Processing",
         tag: "",
         id: 7,
+        time: "2023-09-15",
       },
     ],
     list3: [
@@ -72,9 +79,26 @@ export const useAppStore = defineStore("app", {
         status: "Done",
         tag: "",
         id: 8,
+        time: "",
       },
-      { title: "i", desc: "das", file: [], status: "Done", tag: "", id: 9 },
-      { title: "j", desc: "dasd", file: [], status: "Done", tag: "", id: 10 },
+      {
+        title: "i",
+        desc: "das",
+        file: [],
+        status: "Done",
+        tag: "",
+        id: 9,
+        time: "2023-09-15",
+      },
+      {
+        title: "j",
+        desc: "dasd",
+        file: [],
+        status: "Done",
+        tag: "",
+        id: 10,
+        time: "2023-09-15",
+      },
     ],
   }),
 
@@ -105,6 +129,7 @@ export const useAppStore = defineStore("app", {
       if (statusToListMap[[status]]) {
         statusToListMap[status].push(newTask);
       }
+      console.log(this.list1, "add");
     },
     updateTask(taskId, updatedTask) {
       const index = this.list1.findIndex((task) => task.id === taskId);

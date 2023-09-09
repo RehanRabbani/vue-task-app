@@ -13,7 +13,8 @@
       <h3>Proceesing</h3>
       <draggable class="list-group" :list="list2" group="people" @change="log" itemKey="name" v-bind="dragOptions">
         <template #item="{ element }">
-          <task-item :title="element.title" :id="element.id" :status="element.status" :desc="element.desc" />
+          <task-item :title="element.title" :id="element.id" :status="element.status" :desc="element.desc"
+            :time="element.time" :file="element.file" />
         </template>
       </draggable>
     </section>
@@ -21,7 +22,8 @@
       <h3>Done</h3>
       <draggable class="list-group" :list="list3" group="people" @change="log" itemKey="name" v-bind="dragOptions">
         <template #item="{ element }">
-          <task-item :title="element.title" :id="element.id" :status="element.status" :desc="element.desc" />
+          <task-item :title="element.title" :id="element.id" :status="element.status" :desc="element.desc"
+            :time="element.time" :file="element.file" />
         </template>
       </draggable>
     </section>
