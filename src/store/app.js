@@ -1,10 +1,11 @@
 // Utilities
 import { defineStore } from "pinia";
+import { statusListMap } from "@/util";
 
 export const useAppStore = defineStore("app", {
   state: () => ({
     list1: [
-      { title: "a", desc: "", file: "", status: "Pending", tag: "", id: 1 },
+      { id: 1, title: "a", desc: "abcj", file: "", status: "Pending", tag: "" },
       { title: "b", desc: "", file: "", status: "Pending", tag: "", id: 2 },
       { title: "c", desc: "", file: "", status: "Pending", tag: "", id: 3 },
       { title: "d", desc: "", file: "", status: "Pending", tag: "", id: 4 },
@@ -20,6 +21,7 @@ export const useAppStore = defineStore("app", {
       { title: "j", desc: "", file: "", status: "Done", tag: "", id: 10 },
     ],
   }),
+
   getters: {
     skill() {
       const pendingTaskCount = this.list1.length;
@@ -48,13 +50,42 @@ export const useAppStore = defineStore("app", {
         statusToListMap[status].push(newTask);
       }
     },
-    deleteTask(taskId, status) {
+    updateTask(taskId, updatedTask) {
+      const index = this.list1.findIndex((task) => task.id === taskId);
+      const item = this.list1.find((task) => task.id === taskId);
+
       const statusToListMap = {
-        Pending: "list1",
-        Processing: "list2",
-        Done: "list3",
+        Pending: this.list1,
+        Processing: this.list2,
+        Done: this.list3,
       };
-      const listName = statusToListMap[status];
+
+      if (item.status !== updatedTask.status) {
+        const statusToListMap = {
+          Pending: this.list1,
+          Processing: this.list2,
+          Done: this.list3,
+        };
+
+        if (statusToListMap[updatedTask.status]) {
+          statusToListMap[updatedTask.status].push(updatedTask);
+
+          const listName = statusListMap[item.status];
+          if (listName && this[listName]) {
+            this[listName] = this[listName].filter(
+              (task) => task.id !== taskId
+            );
+          }
+        }
+      } else {
+        statusToListMap[updatedTask.status][index] = {
+          ...statusToListMap[updatedTask.status][index],
+          ...updatedTask,
+        };
+      }
+    },
+    deleteTask(taskId, status) {
+      const listName = statusListMap[status];
       if (listName && this[listName]) {
         this[listName] = this[listName].filter((task) => task.id !== taskId);
       }

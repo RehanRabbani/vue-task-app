@@ -3,7 +3,9 @@
         <section class="task-header">
             <h5> {{ title }} </h5>
             <span>
-                edit
+                <router-link :to="{ name: 'rehan', params: { taskId: id, status } }">
+                    View Details
+                </router-link>
                 <v-btn @click="handleDelete(id, status)">
                     delete
                 </v-btn>

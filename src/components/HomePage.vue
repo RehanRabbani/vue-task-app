@@ -19,8 +19,6 @@ import AddTask from './AddTask/AddTask.vue';
 import SearchFilter from './SearchFilter/SearchFilter.vue';
 import MainBoard from './MainBoard/MainBoard.vue';
 import useAppStore from '@/store/app';
-
-
 const appStore = useAppStore();
 
 </script>
