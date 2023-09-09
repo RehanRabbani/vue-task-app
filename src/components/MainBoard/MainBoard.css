@@ -11,6 +11,7 @@ h3{
 .board-container{
     display: flex;
     justify-content: space-around;
+    margin-top: 1rem;;
 }
 
 .list-group{

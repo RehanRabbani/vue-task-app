@@ -1,14 +1,12 @@
 <template>
-    <router-link to="/new-route"> <v-btn color="primary" @click="dialog = false">Add Task</v-btn></router-link>
+    <router-link to="/new-route" class="add-task"> <v-btn color="primary">Add Task</v-btn></router-link>
     <router-view></router-view>
-    <!-- <task-modal name="AddTask" /> -->
 </template>
 
-
-<script setup>
-
-// import TaskModal from '../TaskModal/TaskModal.vue';
-
-
-</script>
+<style scoped>
+.add-task {
+    margin-right: 8px;
+    ;
+}
+</style>
 

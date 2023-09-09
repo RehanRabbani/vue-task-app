@@ -1,0 +1,56 @@
+.task-container {
+    background-color: #f5f5f5; /* Background color for the task container */
+    border: 1px solid #ddd; /* Border for the task container */
+    padding-bottom: 10px; /* Padding around the task container */
+    margin-bottom: 20px;
+    width: 272px; /* Margin between task containers */
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff; /* Background color for the task header */
+    color: white; /* Text color for the task header */
+    padding: 5px 10px; /* Padding for the task header */
+    border-bottom: 1px solid #0056b3; /* Border for the task header */
+  }
+  
+  .task-header h5 {
+    margin: 0;
+    text-transform: capitalize;
+  }
+  
+  .task-info {
+    margin: 5px 0;
+  }
+  
+  /* Style the "View Details" link */
+  .router-link-exact-active {
+    text-decoration: underline;
+  }
+  
+  /* Style the "Delete" button */
+  .v-btn {
+    background-color: #d9534f; /* Background color for the Delete button */
+    color: white; /* Text color for the Delete button */
+    margin-left: 10px; /* Margin between "View Details" and "Delete" */
+  }
+  
+  .v-btn:hover {
+    background-color: #c9302c; /* Hover background color for the Delete button */
+  }
+  .view-details-link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .view-details-link:hover {
+    color: black; /* Hover link color */
+  }
+  .header-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+  }

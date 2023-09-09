@@ -33,19 +33,20 @@ import { ref } from 'vue'
 
 const dialog = ref(false);
 
-
 const search = ref('')
 const from = ref('')
 const to = ref('')
 
 
-// const openModal = () => {
-//     dialog.value = true
-// }
-
 const closeModal = () => {
     dialog.value = false
 }
 
-
 </script>
+
+<style scoped>
+.text-center {
+    margin-right: 8px;
+    ;
+}
+</style>

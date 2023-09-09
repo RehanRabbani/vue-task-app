@@ -2,21 +2,21 @@
     <div class="task-container">
         <section class="task-header">
             <h5> {{ title }} </h5>
-            <span>
-                <router-link :to="{ name: 'rehan', params: { taskId: id, status } }">
+            <span class="header-buttons">
+                <router-link :to="{ name: 'rehan', params: { taskId: id, status } }" class="view-details-link">
                     View Details
                 </router-link>
-                <v-btn @click="handleDelete(id, status)">
+                <v-btn @click="handleDelete(id, status)" class="v-btn ">
                     delete
                 </v-btn>
 
             </span>
         </section>
         <section>
-            <p>Task :{{ title }}</p>
-            <p>description :{{ desc }} </p>
-            <p>Estimated Time:{{ time }}</p>
-            <p>Attachements:{{ file?.length }}</p>
+            <p class="task-info">Task :{{ title }}</p>
+            <p class="task-info">description :{{ desc }} </p>
+            <p class="task-info">Estimated Time:{{ time }}</p>
+            <p class="task-info">Attachements:{{ file?.length }}</p>
         </section>
     </div>
 </template>
@@ -33,16 +33,4 @@ const handleDelete = (id, status) => {
 }
 </script>
 
-<style scoped>
-.task-header {
-    width: 228px;
-    background-color: aquamarine;
-
-}
-
-.task-container {
-    width: 230px;
-    background-color: azure;
-    border: 1px solid;
-}
-</style>
+<style scoped src="./TaskItem.css"></style>
